@@ -31,15 +31,25 @@ public class FunTest {
         })
 
         // 调用方式4：和3是一样的，只不过lambda表达式放到了()外面
+        // 柯里化 Currying
         filterCountries(list) {
             "中国" == it.name
         }
 
         listOf(1, 2, 3).forEach { foo(it) }
 
+        val name:String? = null
+        println(name)
+        println(name ?: "name为空，这是新的值")
+        println(name)
+
+        schedule(true, Day.FRI)
+
+        // for循环
+        for (i in 1..10) println(i)
 
     }
-    // 高阶函数：以其他函数作为参数或者返回值的函数
+    // 高阶函数1：以其他函数作为参数或者返回值的函数
     private fun filterCountries(
         countries: List<Country>,
         bigCountry: (Country) -> Boolean    // 这是一个函数类型参数
@@ -59,8 +69,22 @@ public class FunTest {
         return 1
     }
 
+    // 高阶函数2：返回值是一个函数
     fun foo2(x: Int): (Int) -> Int {
         return { y: Int -> x + y }
+    }
+
+    /**
+     * when表达式
+     */
+    private fun schedule(sunny: Boolean, day: Day) = when (day) {
+        Day.SAT -> { }
+        Day.SUN -> { }
+        Day.FRI -> { }
+        else -> when {
+            sunny -> {}
+            else -> {}
+        }
     }
 }
 
@@ -72,6 +96,9 @@ class CalFactory {
 
     fun isSmallCountry(country: Country, index: Int): Boolean {
         return false
+    }
+    fun isOk(flag: Boolean) {
+        val ok = if (flag) "我是true" else ""
     }
 
 }
