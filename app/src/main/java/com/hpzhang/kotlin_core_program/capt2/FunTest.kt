@@ -4,7 +4,7 @@ import java.util.Collections.emptyList
 
 /**
  * Created by hpzhang on 3/27/21.
- * 函数、高阶函数、lambda
+ * 函数、高阶函数、lambda、枚举、中缀函数（仅仅只是为了调用优雅）
  */
 public class FunTest {
     /**
@@ -48,6 +48,10 @@ public class FunTest {
         // for循环
         for (i in 1..10) println(i)
 
+        // 中缀函数调用
+        "zhang" add "huipeng"
+        this plusName "huipeng"
+
     }
     // 高阶函数1：以其他函数作为参数或者返回值的函数
     private fun filterCountries(
@@ -85,6 +89,24 @@ public class FunTest {
             sunny -> {}
             else -> {}
         }
+    }
+
+    /**
+     * 中缀函数-扩展函数
+     * 1.必须是某个类型的扩展函数或者成员方法
+     * 2.只能有一个参数，不能是可变参数
+     * 3.函数参数不能有默认值
+     */
+
+    infix fun String.add(name: String) {
+        println("我是中缀函数-扩展函数 $this name is $name")
+    }
+
+    /**
+     * 中缀函数-成员函数
+     */
+    infix fun plusName(name: String) {
+        println("我是中缀函数-成员函数 $this name is $name")
     }
 }
 
