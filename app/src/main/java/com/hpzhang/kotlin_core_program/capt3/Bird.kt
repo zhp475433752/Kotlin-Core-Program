@@ -57,7 +57,7 @@ class Bird2(weight: Double = 0.00, age: Int = 1, color: String = "blue"){
 
 }
 
-abstract class Bird3 {
+abstract class Bird4 {
     abstract val sex:String // 抽象的可以不用初始化值
 }
 
