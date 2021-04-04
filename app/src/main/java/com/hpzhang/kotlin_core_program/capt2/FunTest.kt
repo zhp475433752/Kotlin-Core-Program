@@ -46,7 +46,7 @@ public class FunTest {
         schedule(true, Day.FRI)
 
         // for循环
-        for (i in 1..10) println(i)
+        for (i in 1..2) println(i)
 
         // 中缀函数调用
         "zhang" add "huipeng"
