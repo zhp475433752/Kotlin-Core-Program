@@ -1,5 +1,7 @@
 package com.hpzhang.kotlin_core_program.capt3
 
+import com.hpzhang.kotlin_core_program.capt3.data.Bird6
+import com.hpzhang.kotlin_core_program.capt3.data.Bird7
 import com.hpzhang.kotlin_core_program.capt3.delegate.Animal
 import com.hpzhang.kotlin_core_program.capt3.delegate.Bird5
 import com.hpzhang.kotlin_core_program.capt3.delegate.Flyer
@@ -36,6 +38,25 @@ class Capt3 {
         val b = Bird5(flyer, animal)
         b.fly()
         b.eat()
+
+        val string = "20.1,1,blue"
+        // 解构，最多5个参数，解构基于 componentN函数，和主构造函数相关
+        // 数组支持解构，还有Pair 和 Triple,这两个都是数据类
+        val (weight, age ,color) = string.split(",")
+        println(weight)
+        println(age)
+        println(color)
+        println("-------------------")
+        val pair = Pair(100, "我是第二个")
+        println(pair.first)
+        println(pair.second)
+        val (weightT, ageT, colorT) = Triple(99, 30, "red")
+
+        val bird6 = Bird6(11.1, 23, "red")
+        bird6.code = 32
+
+        val bird7 = Bird7(200, 90)
+        bird7.age
 
     }
 }
