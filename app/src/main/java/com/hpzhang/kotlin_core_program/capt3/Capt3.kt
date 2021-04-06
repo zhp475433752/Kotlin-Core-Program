@@ -59,4 +59,17 @@ class Capt3 {
         bird7.age
 
     }
+
+    /**
+     * 方法重载与返回值无关(因为编译器允许调用一个方法，而不同管这个方法的返回值后续怎么处理)
+     */
+    fun f1(): Int {
+        return 1
+    }
+
+    //fun f1():String{} //这个方法编译不通过
+
+    fun f1(code: Int): Int {
+        return 3
+    }
 }
