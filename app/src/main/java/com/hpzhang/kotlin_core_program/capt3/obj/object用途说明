@@ -1,0 +1,13 @@
+
+-----------------------object---------------------
+
+1.伴生对象 companion object
+    {}里面的都是静态的 和 Java static 声明的一样
+
+2.单例 object
+    object DataBaseConfig{
+        var host : String = "127.0.0.1"
+    }
+
+3.object 表达式
+    代替Java中的匿名内部类

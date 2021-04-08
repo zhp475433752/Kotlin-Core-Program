@@ -9,6 +9,8 @@ import com.hpzhang.kotlin_core_program.capt3.inherit.AAA
 import com.hpzhang.kotlin_core_program.capt3.inherit.AAA2Callback
 import com.hpzhang.kotlin_core_program.capt3.inherit.AAACallback
 import com.hpzhang.kotlin_core_program.capt3.inherit.Bird3
+import com.hpzhang.kotlin_core_program.capt3.obj.SingleInstanceJava
+import com.hpzhang.kotlin_core_program.capt3.obj.SingleInstanceKotlin
 
 /**
  * Created by hpzhang on 3/28/21.
@@ -57,6 +59,11 @@ class Capt3 {
 
         val bird7 = Bird7(200, 90)
         bird7.age
+
+        val instance = SingleInstanceJava.getInstance()
+        println("Java单例 host = ${instance.host}")
+        println("Kotlin单例 host = ${SingleInstanceKotlin.host}")
+
 
     }
 
