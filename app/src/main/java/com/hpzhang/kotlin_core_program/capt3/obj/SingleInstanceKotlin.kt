@@ -3,6 +3,9 @@ package com.hpzhang.kotlin_core_program.capt3.obj
 /**
  * Created by hpzhang on 4/8/21.
  * kotlin单例
+ * 可以继承类和实现接口
+ * 可以继承类和实现接口
+ * 可以继承类和实现接口
  */
 object SingleInstanceKotlin {
     var host: String = "127.0.0.1"
